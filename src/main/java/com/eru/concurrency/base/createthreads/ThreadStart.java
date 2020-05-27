@@ -1,4 +1,4 @@
-package com.eru.concurrency.createthreads;
+package com.eru.concurrency.base.createthreads;
 
 /**
  * 继承 Thread 来启动线程

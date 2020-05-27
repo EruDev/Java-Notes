@@ -1,4 +1,4 @@
-package com.eru.concurrency.createthreads.wrongways;
+package com.eru.concurrency.base.createthreads.wrongways;
 
 import javafx.util.Builder;
 

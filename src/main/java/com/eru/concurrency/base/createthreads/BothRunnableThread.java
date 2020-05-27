@@ -1,4 +1,4 @@
-package com.eru.concurrency.createthreads;
+package com.eru.concurrency.base.createthreads;
 
 /**
  * 匿名内部类重写了 run(), 所以是来自Thread

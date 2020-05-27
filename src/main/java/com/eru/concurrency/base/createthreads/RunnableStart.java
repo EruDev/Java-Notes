@@ -1,4 +1,4 @@
-package com.eru.concurrency.createthreads;
+package com.eru.concurrency.base.createthreads;
 
 /**
  * 实现 Runnable 接口, 来启动线程

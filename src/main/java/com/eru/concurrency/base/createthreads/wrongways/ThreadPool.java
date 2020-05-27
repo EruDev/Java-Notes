@@ -1,4 +1,4 @@
-package com.eru.concurrency.createthreads.wrongways;
+package com.eru.concurrency.base.createthreads.wrongways;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

@@ -6,7 +6,7 @@ package com.eru.concurrency.geektime.features.visibility;
  */
 public class Visibility {
 
-    private static long count = 0;
+    private static volatile long count = 0;
 
     public void add10k(){
         int idx = 0;

@@ -6,12 +6,31 @@ package com.eru.sourcecode.custom.linkedList;
  */
 public class MyLinkedList<E> {
 
+    /** Node size */
     private int size;
 
+    /** 头节点 */
     private Node<E> first;
 
+    /** 尾节点 */
     private Node<E> last;
 
+    /**
+     * 根据传入的对象删除Node
+     * @param o 传入的对象
+     * @return 被删除的Node.item
+     */
+    public E remove(Object o){
+        int index = indexOf(o);
+        checkRange(index);
+        return unlink(index);
+    }
+
+    /**
+     * 根据传入的下标删除Node
+     * @param index 下标
+     * @return 被删除的Node.item
+     */
     public E remove(int index){
         checkRange(index);
         return unlink(index);
@@ -46,6 +65,31 @@ public class MyLinkedList<E> {
 
         size--;
         return item;
+    }
+
+    /**
+     * 根据object查找对应的下标
+     * @param o 传入的对象
+     * @return 下标
+     */
+    public int indexOf(Object o){
+        int index = 0;
+        if (o == null){
+            for (Node<E> f = first; f != null; f = f.next){
+                if (f.item == null){
+                    return index;
+                }
+                index++;
+            }
+        }else{
+            for (Node<E> f = first; f != null; f = f.next){
+                if (o.equals(f.item)){
+                    return index;
+                }
+                index++;
+            }
+        }
+        return -1;
     }
 
     /**
@@ -132,7 +176,7 @@ public class MyLinkedList<E> {
     }
 
     /**
-     * 链表中存储的node
+     * 链表中存储的Node
      */
     class Node<E>{
         /** 前一个node */
